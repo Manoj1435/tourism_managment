@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %} Contact
+{% endblock title %}
+
+{% block body %}
+{% load static %}
+
+<div class="container-fluid mx-0 px-0  justify-content-between">
+
+    <img src='{% static "images/contact.jpg" %} ' alt="" height="500px" width="100%">
+</div>
+<div class="container my-4">
+    <h1 class="text-center">Contact Us</h1>
+    <form action="{%  url 'contact' %}" class="form-group px-5" method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+        </div>
+
+        <div class="mb-3">
+            <label for="phone" class="form-label">phone number</label>
+            <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your phone number">
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="enter your email">
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="desc" class="form-label">Why you want to contact us</label>
+            <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        {% if messages %}
+        {% for messages in messages %}
+        <div class="alert alert-success {{ message.tags }} alert-dismissible fade show my-0 " role="alert">
+            {{messages}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </form>
+</div>
+
+<footer>
+    <div class="copy">
+        <div class="container">
+            <a href="https://www.smarteyeapps.com/">2015 &copy; All Rights Reserved | Designed and Developed by
+                Smarteyeapps</a>
+
+            <span>
+                <a><i class="fab fa-github"></i></a>
+                <a><i class="fab fa-google-plus-g"></i></a>
+                <a><i class="fab fa-pinterest-p"></i></a>
+                <a><i class="fab fa-twitter"></i></a>
+                <a><i class="fab fa-facebook-f"></i></a>
+            </span>
+        </div>
+
+    </div>
+
+</footer>
+
+{% endblock body %}

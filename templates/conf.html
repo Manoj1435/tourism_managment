@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}bookings
+{% endblock title %}
+
+{% block body %}
+
+<div class="container p-3 mt-3 mb-5" style="border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.50);">
+    <h2 class="text-center  " style="color: rgb(93, 187, 250);"> <b>Booking form</b> </h2>
+    <form action="" id="booking" method="POST">
+        {% csrf_token %}
+        <div class="form-group ">
+            <label for="pname">Package name</label>
+            <input type="text" class="form-control" id="pname" name="pname" placeholder="create package" size="5">
+        </div> <br>
+        <div class="form-group">
+            <label for="ptype">package type</label>
+            <input type="text" class="form-control" id="ptype" name="ptype"
+                placeholder="package type eg- family package/couple package">
+        </div> <br>
+
+        <div class="form-group ">
+            <label for="name">Tourist name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" size="5">
+        </div> <br>
+
+
+        <div class="form-group ">
+            <label for="features">Email</label>
+            <input type="email" class="form-control" id="features" name="email" placeholder="Enter your email" size="5">
+        </div> <br>
+
+        <div class="form-group ">
+            <label for="price">Phone number</label>
+            <input type="phone" class="form-control" id="price" name="phone" placeholder=" Enter your phone number"
+                size="5">
+        </div> <br>
+        <div class="apply d-flex">
+
+            <div class="form-group pb-3 ">
+                <button type="submit" class="btn btn-success me-5 ms-5">Confirm booking</button>
+            </div>
+
+            <div class="form-group pb-3">
+                <button type="button" class="btn btn-danger">Cancel</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+<footer>
+    <div class="copy">
+        <div class="container">
+            <a href="https://www.smarteyeapps.com/">2015 &copy; All Rights Reserved | Designed and Developed by
+                Smarteyeapps</a>
+
+            <span>
+                <a><i class="fab fa-github"></i></a>
+                <a><i class="fab fa-google-plus-g"></i></a>
+                <a><i class="fab fa-pinterest-p"></i></a>
+                <a><i class="fab fa-twitter"></i></a>
+                <a><i class="fab fa-facebook-f"></i></a>
+            </span>
+        </div>
+
+    </div>
+
+</footer>
+
+{% endblock body %}

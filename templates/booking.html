@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}bookings
+{% endblock title %}
+
+{% block body %}
+<div class="container">
+    <h4 class="text-center">booking information</h4>
+    {% if form %}
+    <table class="table">
+        <thead>
+            <tr class="">
+                <th>ID</th>
+                <th>TOURIST NAME</th>
+                <th>DESTINATION</th>
+                <th>PACKAGE TYPE</th>
+                <th>EMAIL</th>
+                <th>PHONE NUMBER</th>
+                <th>ACTION</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for st in form %}
+            <tr class="">
+                <td>{{st.id}}</td>
+                <td>{{st.name}}</td>
+                <td>{{st.pname}}</td>
+                <td>{{st.ptype}}</td>
+                <td>{{st.email}}</td>
+                <td>{{st.phone}}</td>
+                <td>
+
+                    <form action="{% url 'delete' st.id %}" method="POST">
+                        {% csrf_token %}
+                        <a href="" class="btn btn-warning">update</a>
+                        <input type="submit" value="Delete" class="btn btn-danger">
+                    </form>
+
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <h1>No data</h1>
+    {% endif %}
+</div>
+
+{% endblock body %}

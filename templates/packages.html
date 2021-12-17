@@ -1,0 +1,217 @@
+{% extends 'base.html' %}
+{% block title %} Tour Packages
+{% endblock title %}
+
+{% block body %}
+{% load static %}
+<div class="container">
+    <h1 class="text-primary ms-5 mt-2 mb-4"> <span class="text-success">tour</span> packages</h1>
+
+</div>
+<section id="tour">
+    <div class="container  border border-2">
+        <form class="row justify-content-between">
+            <div class="col-auto">
+                <div class="images d-flex">
+                    <div>
+                        <img src="{% static 'images/Ladakh.jpg' %} " alt="" class="img-fluid" width="250px">
+                    </div>
+                    <div style="margin-left: 30px; margin-top: 10px;"><b style="color: rgb(12, 207, 12);"> Package
+                            Name:Leh Ladakh, Jammu & Kashmir - India's Own Moonland</b> <br>
+                        <b>package type:family package & friends</b> <br>
+                        <span style="color: grey;"> <b>package location:</b>Ladakh</span> <br>
+                        <span style="color: grey;"><b>features:</b> free breakfast & free pick up and drop
+                            facility</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-auto me-5">
+
+
+            </div>
+            <div class="col-auto me-1 p-3 ">
+                <div style="color: grey; padding: 10px;">
+
+                    <b style="color: grey;"> rup 7000</b>
+                </div>
+
+                <a href="{% url 'confirm' %}"><button type="button" class="btn btn-primary">book now
+                    </button></a>
+
+
+            </div>
+        </form>
+    </div>
+
+    <div class="container mt-4 border border-2 ">
+        <form class="row justify-content-between">
+            <div class="col-auto">
+                <div class="images d-flex">
+                    <div>
+                        <img src="{% static 'images/GOA.jpg' %}" alt="" class="img-fluid" width="250px">
+                    </div>
+                    <div style="margin-left: 30px; margin-top: 10px;"><b style="color: rgb(12, 207, 12);"> Package
+                            Name:goa-
+                            beach,sunset and
+                            crazy
+                            night</b> <br>
+                        <b>package type:family package</b> <br>
+                        <span style="color: grey;"> <b>package location:</b> goa</span> <br>
+                        <span style="color: grey;"><b>features:</b>free pick up and drop facility</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-auto me-5">
+
+
+            </div>
+            <div class="col-auto me-1 p-3 ">
+                <div style="color: grey; padding: 10px;">
+
+                    <b style="color: grey;"> rup 10000</b>
+                </div>
+                <a href="{% url 'confirm' %}"><button type="button" class="btn btn-primary">book now
+                    </button></a>
+
+            </div>
+        </form>
+    </div>
+
+    <div class="container mt-4 border border-2 ">
+        <form class="row justify-content-between">
+            <div class="col-auto">
+                <div class="images d-flex">
+                    <div>
+                        <img src="{% static 'images/ANDAMAN.jpg' %}" alt="" class="img-fluid" width="250px">
+                    </div>
+                    <div style="margin-left: 30px; margin-top: 10px;"><b style="color: rgb(12, 207, 12);">Package
+                            Name:Radhanagar Beach Cellular Jail Ross Island</b> <br>
+                        <b>package type:family package & friends</b> <br>
+                        <span style="color: grey;"> <b>package location:</b>Andaman</span> <br>
+                        <span style="color: grey;"><b>features:</b>free pick up and drop facility</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-auto me-5">
+
+
+            </div>
+            <div class="col-auto me-1 p-3 ">
+                <div style="color: grey; padding: 10px;">
+
+                    <b style="color: grey;"> rup 11000</b>
+                </div>
+
+                <a href="{% url 'confirm' %}"><button type="button" class="btn btn-primary">book now
+                    </button></a>
+
+            </div>
+        </form>
+    </div>
+
+    <div class="container mt-4 border border-2  mb-5">
+        <form class="row justify-content-between">
+            <div class="col-auto">
+                <div class="images d-flex">
+                    <div>
+                        <img src="{% static 'images/AGRA.jpg' %}" alt="" class="img-fluid" width="250px">
+                    </div>
+                    <div style="margin-left: 30px; margin-top: 10px;"><b style="color: rgb(12, 207, 12);"> Package
+                            Name:Taj Mahal-Fatehpur Sikri Agra Fort</b> <br>
+                        <b>package type:family package</b> <br>
+                        <span style="color: grey;"> <b>package location:</b> Agra</span> <br>
+                        <span style="color: grey;"><b>features:</b> free breakfast,free pick up and drop
+                            facility</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-auto me-5">
+
+
+            </div>
+            <div class="col-auto  p-3 ">
+                <div style="color: grey; padding: 10px;">
+
+                    <b style="color: grey;"> rup 8000</b>
+                </div>
+
+                <a href="{% url 'confirm' %}"><button type="button" class="btn btn-primary"> book now</button>
+                </a>
+
+
+            </div>
+        </form>
+    </div>
+
+
+    <div class="container mt-4 border border-2  mb-5">
+        <form class="row justify-content-between">
+            <div class="col-auto">
+                <div class="images d-flex">
+                    <div>
+                        <img src="{% static 'images/MUNNAR.jpg' %}" alt="" class="img-fluid" width="250px">
+                    </div>
+                    <div style="margin-left: 30px; margin-top: 10px;"><b style="color: rgb(12, 207, 12);">Package
+                            Name:Munnar, Kerala - Tea Gardens, Lakes and Pretty little hill-station</b> <br>
+                        <b>package type:family package</b> <br>
+                        <span style="color: grey;"> <b>package location:</b> munnar, kerala</span> <br>
+                        <span style="color: grey;"><b>features:</b>free pick up and drop facility</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-auto me-5">
+
+
+            </div>
+            <div class="col-auto  p-3 ">
+                <div style="color: grey; padding: 10px;">
+
+                    <b style="color: grey;"> rup 9000</b>
+                </div>
+
+                <a href="{% url 'confirm' %}"><button type="button" class="btn btn-primary">book now
+                    </button></a>
+
+
+            </div>
+        </form>
+    </div>
+
+</section>
+
+<footer>
+    <div class="copy">
+        <div class="container">
+            <a href="https://www.smarteyeapps.com/">2015 &copy; All Rights Reserved | Designed and Developed by
+                Smarteyeapps</a>
+
+            <span>
+                <a><i class="fab fa-github"></i></a>
+                <a><i class="fab fa-google-plus-g"></i></a>
+                <a><i class="fab fa-pinterest-p"></i></a>
+                <a><i class="fab fa-twitter"></i></a>
+                <a><i class="fab fa-facebook-f"></i></a>
+            </span>
+        </div>
+
+    </div>
+
+</footer>
+
+
+{% endblock body %}
